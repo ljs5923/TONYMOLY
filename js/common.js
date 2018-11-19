@@ -1,17 +1,18 @@
 jQuery(function ($) {
     //    menu event start
-    var $localMenu = $('._local_menu ._local_menu_lsts');
-    var $localLst = $localMenu.find('._lst');
-    var $subMenu = $('._sub_menu_wrap');
-    $localLst.on('click', function (e) {
-        var index = $(this).index();
-        $(this).toggleClass('_active').siblings().removeClass('_active');
-        $subMenu.eq(index).fadeToggle().siblings().hide();
-    })
-    $subMenu.on('mouseleave',function(){
-        $localLst.removeClass('_active');
-        $subMenu.slideUp();
-    })
+    var $headerDownWrap = $('._header_down_wrap');
+    var $gnb = $('#_gnb');
+    var $menuMainLst = $gnb.find('._lst');
+    var $subMenu = $menuMainLst.find('._sub_lst');
+    $gnb.hover(
+        function(){
+            $subMenu.stop().slideDown();
+            $headerDownWrap.addClass('_on');
+        }, function(){
+            $subMenu.stop().slideUp();
+            $headerDownWrap.removeClass('_on');
+        }
+    );
     //    menu event end
     //    slide event start
     var $sliderWrap = $('._slider_wrap');
@@ -81,10 +82,9 @@ jQuery(function ($) {
     // best keyword event start
     var $moreBtn = $('._more_btn');
     var $keyWordLstsWrap = $('._keyword_lsts_wrap');
-    var $keyWordLsts = $('._keyword_lsts');
+//    var $keyWordLsts = $('._keyword_lsts');
+//    var $keyWordLst = $keyWordLsts.find('li');
     $moreBtn.on('click',function(){
-        $(this).toggleClass('_up');
-        $keyWordLstsWrap.toggleClass('_up');
-        $keyWordLsts.toggleClass('_up');
+        $keyWordLstsWrap.toggleClass('_on');
     })
 })
