@@ -1,9 +1,10 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&subset=korean');
 /* reset */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,
 b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1}
+html,body{line-height:1;font-family: 'Noto Sans KR', sans-serif}
 button{border: none;background: none}
 ol,ul{list-style:none}
 a{text-decoration:none;font-size:100%;color:#555;background:transparent}
@@ -28,6 +29,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_header ._header_top ._member_info_wrap ._lst:after{content: '';position: absolute;right: 0;top: 50%;width: 1px;height: 14px;margin-top: -7px;background-color: #555}
 #_header ._header_top ._member_info_wrap ._lst:last-of-type:after{display: none}
 #_header ._header_top ._member_info_wrap ._lst a{display: block;line-height: 30px;text-align: center;font-size: 14px}
+#_header ._header_top ._member_info_wrap ._lst a:hover{font-weight: bold;color: #000}
 #_header ._header_down_wrap{position: absolute;top: 50px;left: 0;width: 100%;background-color: #fff;z-index: 200}
 #_header ._header_down_wrap._on:before{content: '';position: absolute;top: 40px;left: 0;width: 100%;height: 1px;background-color: #ccc}
 #_header ._header_down ._local_menu{width: 1200px;margin: 0 auto}
@@ -80,7 +82,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_container ._content_wrap._content_02 ._content_box{width: 100%}
 #_container ._content_wrap ._bestItem_lsts li{float: left;width: 20%}
 #_container ._content_wrap._content_03{padding: 0}
-#_container ._content_wrap._content_03 ._content_box{float: left;width: 50%;height: 600px;padding-top: 30px;padding-bottom: 30px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
+#_container ._content_wrap._content_03 ._content_box{float: left;width: 50%;height: 599px;padding-top: 30px;padding-bottom: 30px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
 #_container ._content_wrap._content_03 ._content_box._content_01{border-right: 1px solid #ccc}
 #_container ._content_wrap._content_03 ._content_box._content_01 ._img_box{width: 80%;margin: 0 auto}
 #_container ._content_wrap._content_03 ._content_box ._md_choice_box{float: left;width: 50%;margin-top: 30px;}
@@ -119,3 +121,18 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_container ._content_wrap._content_05 ._content_box._content_02 a ._sub_tit:before{background-image: url(../img/shopping/store_icon.png)}
 #_container ._content_wrap._content_05 ._content_box._content_03 a ._sub_tit:before{background-image: url(../img/shopping/insta_icon.png)}
 #_container ._content_wrap._content_05 ._content_box._content_04 a ._sub_tit:before{background-image: url(../img/shopping/face_icon.png)}
+/* _footer */
+#_footer{padding: 30px 0;background-color: #555;border-top: 5px solid #333;}
+#_footer ._footer_wrap{width: 1200px;margin: 0 auto}
+#_footer ._footer_top_wrap{margin-bottom: 30px}
+#_footer ._footer_top_wrap ._footer_lsts li{float: left;position: relative;width: 16%;text-align: center}
+#_footer ._footer_top_wrap ._footer_lsts li:after{content: '';position: absolute;top: 50%;right: 0;width: 1px;height: 18px;margin-top: -9px;background-color: #fff}
+#_footer ._footer_top_wrap ._footer_lsts li:last-child:after{display: none}
+#_footer ._footer_top_wrap ._footer_lsts li:first-child{margin-left: 2%}
+#_footer ._footer_top_wrap ._footer_lsts li:last-child{margin-right: 2%}
+#_footer ._footer_top_wrap ._footer_lsts li a{display: inline-block;line-height: 40px;color: #fff}
+#_footer ._footer_bot_wrap{text-align: center;font-size: 14px;color: #fff}
+#_footer ._footer_top_wrap ._footer_lsts li a:hover{color: #333;font-weight: bold}
+#_footer ._footer_bot_wrap address:first-child{margin-bottom: 20px}
+#_footer ._footer_bot_wrap span{margin-right: 20px}
+#_footer ._footer_bot_wrap span:last-child{margin-right: 0}
