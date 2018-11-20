@@ -5,86 +5,98 @@ jQuery(function ($) {
     var $menuMainLst = $gnb.find('._lst');
     var $subMenu = $menuMainLst.find('._sub_lst');
     $gnb.hover(
-        function(){
+        function () {
             $subMenu.stop().slideDown();
             $headerDownWrap.addClass('_on');
-        }, function(){
+        },
+        function () {
             $subMenu.stop().slideUp();
             $headerDownWrap.removeClass('_on');
         }
     );
     //    menu event end
     //    slide event start
+    var $sliderContainer = $('._slider_container');
     var $sliderWrap = $('._slider_wrap');
     var $slider = $('._slider');
     var $sliderImg = $slider.find('li');
-    var sliderImgW = $sliderImg.outerWidth();
-    var sliderWrapML = ($sliderWrap.outerWidth(true)-sliderImgW)/2
     var $cotrolWrap = $('._btn_wrap')
     var $controlBtn = $cotrolWrap.find('._btn');
     var $pagerWrap = $('._pager_wrap');
     var $pagerBtn = $pagerWrap.find('._pager_btn');
     var $startStopWrap = $('._play_stop_wrap');
-    var $startStopBtn = $startStopWrap.find('._btn');    
-    $slider.css('left',-(sliderImgW-sliderWrapML))
-    $controlBtn.on('click', function (e) {
-        e.preventDefault();
-        if ($(this).hasClass('_next_btn')) {
-            return nextAni();
-        } else if ($(this).hasClass('_prev_btn')) {
-            return prevAni();
-        }
-    });
-    $pagerBtn.on('click', function () {
-        var pagerIndex = $(this).index();
-        $(this).addClass('_on').siblings().removeClass('_on');
-        $slider.animate({
-            left: -(sliderImgW-sliderWrapML) + (-sliderImgW * pagerIndex)
-        });
-        index = pagerIndex
-    })
-    function prevAni() {
+    var $startStopBtn = $startStopWrap.find('._btn');
+    var sliderImgW = $sliderImg.outerWidth();
+    var sliderWrapML = ($sliderWrap.outerWidth(true) - sliderImgW) / 2
+    $slider.css('left', -(sliderImgW - sliderWrapML));
+    $(window).on('load resize', function () {
         var index = $('._pager_btn._on').index();
-        $slider.animate({
-            left: -(sliderImgW-sliderWrapML) + (-sliderImgW*(index-1))
-        },function(){
-            if(index==0){
-                $slider.css('left',-(sliderImgW-sliderWrapML) + (-sliderImgW * 5));
-                $pagerBtn.eq(5).addClass('_on').siblings().removeClass('_on');
+        sliderImgW = $sliderImg.outerWidth();
+        sliderWrapML = ($sliderWrap.outerWidth(true) - sliderImgW) / 2
+        $sliderContainer.css('height', $sliderImg.height());
+        $sliderWrap.css({
+            width: $sliderImg.outerWidth(),
+            height: $sliderImg.outerHeight()
+        });
+
+        function prevAni() {
+            $slider.animate({
+                left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index - 1))
+            }, function () {
+                if (index == 0) {
+                    $slider.css('left', -(sliderImgW - sliderWrapML) + (-sliderImgW * 5));
+                    $pagerBtn.eq(5).addClass('_on').siblings().removeClass('_on');
+                }
+            });
+            $pagerBtn.eq(index - 1).addClass('_on').siblings().removeClass('_on');
+        }
+
+        function nextAni() {
+            $slider.animate({
+                left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index + 1))
+            }, function () {
+                if (index == 5) {
+                    $slider.css('left', -(sliderImgW - sliderWrapML));
+                    $pagerBtn.eq(0).addClass('_on').siblings().removeClass('_on');
+                }
+                $pagerBtn.eq(index + 1).addClass('_on').siblings().removeClass('_on');
+            });
+        }
+        $controlBtn.on('click', function (e) {
+            e.preventDefault();
+            if ($(this).hasClass('_next_btn')) {
+                return nextAni();
+            } else if ($(this).hasClass('_prev_btn')) {
+                return prevAni();
             }
         });
-        $pagerBtn.eq(index-1).addClass('_on').siblings().removeClass('_on');
-    }
-    function nextAni() {
-        var index = $('._pager_btn._on').index();
-        $slider.animate({
-            left: -(sliderImgW-sliderWrapML) + (-sliderImgW*(index+1))
-        }, function () {
-            if (index == 5) {
-                $slider.css('left', -(sliderImgW-sliderWrapML));
-                $pagerBtn.eq(0).addClass('_on').siblings().removeClass('_on');
-            }
-            $pagerBtn.eq(index + 1).addClass('_on').siblings().removeClass('_on');
+        $pagerBtn.on('click', function () {
+            var pagerIndex = $(this).index();
+            $(this).addClass('_on').siblings().removeClass('_on');
+            $slider.animate({
+                left: -(sliderImgW - sliderWrapML) + (-sliderImgW * pagerIndex)
+            });
+            index = pagerIndex;
         });
-    }
-    var sliderAuto = setInterval(nextAni,5000);
-    $startStopBtn.on('click',function(e){
-        e.preventDefault();
-        if($(this).hasClass('_start')){
-            sliderAuto = setInterval(nextAni,5000);
-            $(this).removeClass('_on').siblings().addClass('_on');
-        } else if($(this).hasClass('_stop')) {
-            clearInterval(sliderAuto);
-            $(this).removeClass('_on').siblings().addClass('_on');
-        }
+        var sliderAuto = setInterval(nextAni, 10000);
+        $startStopBtn.on('click', function (e) {
+            e.preventDefault();
+            if ($(this).hasClass('_start')) {
+                sliderAuto = setInterval(nextAni, 10000);
+                $(this).removeClass('_on').siblings().addClass('_on');
+            } else if ($(this).hasClass('_stop')) {
+                clearInterval(sliderAuto);
+                $(this).removeClass('_on').siblings().addClass('_on');
+            }
+        });
     })
     //    slide event end
     // best keyword event start
     var $moreBtn = $('._more_btn');
     var $keyWordLstsWrap = $('._keyword_lsts_wrap');
-//    var $keyWordLsts = $('._keyword_lsts');
-//    var $keyWordLst = $keyWordLsts.find('li');
-    $moreBtn.on('click',function(){
+    //    var $keyWordLsts = $('._keyword_lsts');
+    //    var $keyWordLst = $keyWordLsts.find('li');
+    $moreBtn.on('click', function () {
         $keyWordLstsWrap.toggleClass('_on');
     })
 })
