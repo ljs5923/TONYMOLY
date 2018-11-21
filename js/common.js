@@ -29,14 +29,18 @@ jQuery(function ($) {
     var $startStopWrap = $('._play_stop_wrap');
     var $startStopBtn = $startStopWrap.find('._btn');
     $slider.css('left', -(sliderImgW - sliderWrapML));
+    $sliderWrap.css({
+        width: $sliderImg.outerWidth(),
+        height: $sliderImg.outerHeight()
+    });
     $(window).on('resize load', function () {
         sliderImgW = $sliderImg.outerWidth();
         sliderWrapML = ($sliderWrap.outerWidth(true) - sliderImgW) / 2
-        $sliderContainer.css('height', $sliderImg.height());
         $sliderWrap.css({
             width: $sliderImg.outerWidth(),
             height: $sliderImg.outerHeight()
         });
+        $slider.css('left', -(sliderImgW - sliderWrapML));
     })
     $controlBtn.on('click', function (e) {
         var imgIndex = $('._pager_btn._on').index();
@@ -49,6 +53,7 @@ jQuery(function ($) {
     });
 
     function prevAni(index) {
+        index = $('._pager_btn._on').index();
         $slider.animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index - 1))
         }, function () {
@@ -61,6 +66,7 @@ jQuery(function ($) {
     }
 
     function nextAni(index) {
+        index = $('._pager_btn._on').index();
         $slider.animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index + 1))
         }, function () {
@@ -73,10 +79,10 @@ jQuery(function ($) {
     }
     $pagerBtn.on('click', function () {
         var pagerIndex = $(this).index();
-        $(this).addClass('_on').siblings().removeClass('_on');
         $slider.animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * pagerIndex)
         });
+        $(this).addClass('_on').siblings().removeClass('_on');
     });
     var sliderAuto = setInterval(nextAni, 10000);
     $startStopBtn.on('click', function (e) {
