@@ -160,12 +160,12 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 @media only screen and (max-width:1199px){
     ._sub_tit{margin-bottom: 20px;font-size: 16px}
     ._sub_tit em{font-size: 18px}
-/*    header    */
+/*    _header    */
     #_header ._header_top{width: 100%}
     #_header ._header_top ._member_info_wrap{display: none}
     #_header ._header_down_wrap{display: none}
     #_header ._moblie_menu_btn_wrap ._m_btn{display: block}
-/*    container    */
+/*    _container    */
     #_container ._slider_container{margin-top: 0}
     #_container ._content_wrap ._content_box ._content_container{position: static;top: inherit;left: inherit;-webkit-transform: none;-ms-transform: none;-moz-transform: none;transform: none}
     #_container ._content_wrap._content_03 ._content_box{height: auto}
@@ -177,12 +177,12 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
     #_container ._content_wrap._content_04 ._content_box ._opening_hours_box{font-size: 16px}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._txt{font-size: 14px}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._info_txt{font-size: 12px}
-    #_container ._content_wrap._content_04 ._content_box ._news_lsts li a{font-size: 14px}
-    
+    #_container ._content_wrap._content_04 ._content_box ._news_lsts li a{font-size: 14px}    
 }
 /* width 992px 보다 작은 화면 */
 @media only screen and (max-width:991px){
-    ._sub_tit{text-align: center}
+    ._sub_tit{text-align: center}    
+/*    _container    */
     #_container ._slider_container ._pager_wrap ._pager_btn{width: 18px;height: 18px;line-height: 18px;font-size: 12px}
     #_container ._slider_container ._play_stop_wrap ._btn{width: 21px;height: 21px;background-size: 100%}
     #_container ._content_wrap ._content_box{width: 33.3%;}
@@ -204,19 +204,22 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
     #_container ._content_wrap._content_05 ._content_box ._sub_tit{padding-left: 30px;font-size: 14px}
     #_container ._content_wrap._content_05 ._content_box a ._sub_tit:before{width: 20px;height: 20px;margin-top: -10px}
     #_container ._content_wrap._content_05 ._content_box ._sub_tit em{margin-bottom: 0;font-size: 16px}
+/*    _footer    */
     #_footer ._footer_top_wrap ._footer_lsts li a{font-size: 14px}
     #_footer ._footer_bot_wrap span{display: block;margin-right: 0;margin-bottom: 10px}
     #_footer ._footer_bot_wrap span:last-child{margin-bottom: 0}
 }
 /* width 768px 보다 작은 화면 */
 @media only screen and (max-width:767px){
+    ._sub_tit{font-size: 14px}
+    ._sub_tit em{font-size: 16px} 
+/*    _header    */
     #_header ._header_top ._logo_wrap ._logo a{font-size: 18px}
     #_moblie_menu_wrap{width: 100%}
     #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst > a{line-height: 30px;font-size: 14px}
     #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst > a span{padding-left: 5px;font-size: 12px}
-    #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst ._sub_lst > li a{line-height: 24px;font-size: 12px}
-    ._sub_tit{font-size: 14px}
-    ._sub_tit em{font-size: 16px}
+    #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst ._sub_lst > li a{line-height: 24px;font-size: 12px}    
+/*    _container    */
     #_container ._content_wrap._content_05 ._content_box{width: 50%}
     #_container ._content_wrap ._content_box ._keyword_lsts li{font-size: 14px}
     #_container ._content_wrap._content_03 ._content_box ._text_box ._foc_txt{font-size: 16px}
@@ -228,6 +231,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._txt{font-size: 12px}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._info_txt{font-size: 10px}
     #_container ._content_wrap._content_04 ._content_box ._news_lsts li a{font-size: 12px}
+/*    _footer    */
     #_footer ._footer_top_wrap ._footer_lsts li{width: 14%}
     #_footer ._footer_top_wrap ._footer_lsts li:nth-child(3){width: 20%}
     #_footer ._footer_top_wrap ._footer_lsts li:nth-child(n+5){width: 19%}
@@ -235,6 +239,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
     #_footer ._footer_bot_wrap{font-size: 12px}
 }
 @media only screen and (max-width:575px){
+/*    _container    */
     #_container ._slider_container{margin-bottom: 15px}
     #_container ._slider_container ._pager_wrap{bottom: 0}
     #_container ._slider_container ._pager_wrap ._pager_btn{width: 10px;height: 10px;margin-right: 5px;text-indent: -9999px}
@@ -247,6 +252,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
     #_container ._content_wrap._content_04 ._content_box ._contact_box ._contact_txt{font-size: 10px}
     #_container ._content_wrap._content_04 ._content_box ._contact_box{width: 40%;padding: 0 5%}
     #_container ._content_wrap._content_04 ._content_box ._contact_box ._phone_icon{width: 20px;height: 20px;margin-right: 5px}
+/*    _footer    */
     #_footer ._footer_wrap{width: 100%}
     #_footer ._footer_top_wrap ._footer_top ._footer_lsts li{width: 30%}
     #_footer ._footer_top_wrap ._footer_top ._footer_lsts li:nth-child(3n){width: 40%}
