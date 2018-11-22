@@ -131,8 +131,6 @@ jQuery(function ($) {
     // best keyword event start
     var $moreBtn = $('._more_btn');
     var $keyWordLstsWrap = $('._keyword_lsts_wrap');
-    //    var $keyWordLsts = $('._keyword_lsts');
-    //    var $keyWordLst = $keyWordLsts.find('li');
     $moreBtn.on('click', function () {
         $keyWordLstsWrap.toggleClass('_on');
     })
