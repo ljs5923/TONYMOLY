@@ -15,6 +15,30 @@ jQuery(function ($) {
         }
     );
     //    menu event end
+    //    moblie menu event start
+    var $moblieMenuWrap = $('#_moblie_menu_wrap');
+    var $moblieMenu = $moblieMenuWrap.find('._moblie_gnb');
+    var moblieMenuW = $moblieMenuWrap.outerWidth();
+    var $moblieMenuBtn = $('._m_btn');
+    var $moblieMenuLsts = $('._moblie_menu_lsts');
+    var $moblieMenuLst=$moblieMenuLsts.find('._lst');
+    $moblieMenuWrap.css('right', -(moblieMenuW));
+    $moblieMenuBtn.on('click', function () {
+        $(this).toggleClass('_on');
+        $moblieMenuWrap.stop().animate({
+            right: -(moblieMenuW)
+        });
+        if ($(this).hasClass('_on')) {
+            $moblieMenuWrap.stop().animate({
+                right: 0
+            });
+        }
+    });
+    $moblieMenuLst.on('click',function(){
+        $(this).find('._sub_lst').stop().slideDown();
+        $(this).siblings().find('._sub_lst').stop().slideUp();
+    })
+    //    moblie menu event end
     //    slide event start
     var $sliderContainer = $('._slider_container');
     var $sliderWrap = $('._slider_wrap');
@@ -54,7 +78,7 @@ jQuery(function ($) {
 
     function prevAni(index) {
         index = $('._pager_btn._on').index();
-        $slider.animate({
+        $slider.stop().animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index - 1))
         }, function () {
             if (index == 0) {
@@ -67,7 +91,7 @@ jQuery(function ($) {
 
     function nextAni(index) {
         index = $('._pager_btn._on').index();
-        $slider.animate({
+        $slider.stop().animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index + 1))
         }, function () {
             if (index == 5) {
@@ -79,7 +103,7 @@ jQuery(function ($) {
     }
     $pagerBtn.on('click', function () {
         var pagerIndex = $(this).index();
-        $slider.animate({
+        $slider.stop().animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * pagerIndex)
         });
         $(this).addClass('_on').siblings().removeClass('_on');
