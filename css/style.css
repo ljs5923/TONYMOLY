@@ -39,7 +39,10 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_header ._header_down ._local_menu ._lst:last-of-type{margin-right: 2%}
 #_header ._header_down ._local_menu ._lst:hover > a{font-size: 18px;color: #000}
 #_header ._header_down ._local_menu ._lst:hover ._sub_lst{background-color: #ccc}
-#_header ._header_down ._local_menu ._lst > a{display: block;height: 40px;line-height: 40px;font-weight: bold;color: #555;-webkit-transition:all 0.3s ease;-o-transition:all 0.3s ease;-moz-transition:all 0.3s ease;transition:all 0.3s ease}
+#_header ._header_down ._local_menu ._lst > a{display: inline-block;position: relative;line-height: 40px;font-weight: bold;color: #555;-webkit-transition:all 0.3s ease;-o-transition:all 0.3s ease;-moz-transition:all 0.3s ease;transition:all 0.3s ease}
+#_header ._header_down ._local_menu ._lst > a:after{content: '';position: absolute;top: 35px;left: 0;width: 0;height: 2px;background-color: #555;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition:all 0.3s ease}
+#_header ._header_down ._local_menu ._lst._on > a:after{width: 100%}
+#_header ._header_down ._local_menu ._lst._active > a:after{width: 100%}
 #_header ._header_down ._local_menu ._lst ._sub_lst{display: none;height: 360px}
 #_header ._header_down ._local_menu ._lst ._sub_lst li a{display: block;height: 40px;line-height: 40px;font-size: 14px;color: #555}
 #_header ._header_down ._local_menu ._lst ._sub_lst li a:hover{color: #fff}

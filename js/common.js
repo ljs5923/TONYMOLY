@@ -14,6 +14,14 @@ jQuery(function ($) {
             $headerDownWrap.removeClass('_on');
         }
     );
+    $menuMainLst.hover(
+        function () {
+            $(this).addClass('_on');
+        },
+        function () {
+            $(this).removeClass('_on');
+        }
+    );
     //    menu event end
     //    moblie menu event start
     var $moblieMenuWrap = $('#_moblie_menu_wrap');
@@ -21,7 +29,7 @@ jQuery(function ($) {
     var moblieMenuW = $moblieMenuWrap.outerWidth();
     var $moblieMenuBtn = $('._m_btn');
     var $moblieMenuLsts = $('._moblie_menu_lsts');
-    var $moblieMenuLst=$moblieMenuLsts.find('._lst');
+    var $moblieMenuLst = $moblieMenuLsts.find('._lst');
     $moblieMenuWrap.css('right', -(moblieMenuW));
     $moblieMenuBtn.on('click', function () {
         $(this).toggleClass('_on');
@@ -34,7 +42,7 @@ jQuery(function ($) {
             });
         }
     });
-    $moblieMenuLst.on('click',function(){
+    $moblieMenuLst.on('click', function () {
         $(this).find('._sub_lst').stop().slideDown();
         $(this).siblings().find('._sub_lst').stop().slideUp();
     })
