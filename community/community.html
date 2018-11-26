@@ -606,7 +606,50 @@
                 </div>
             </div>
         </footer>
+        <div id="_new_write_wrap">
+            <div class="_new_write">
+                <h4 class="_sub_tit">포토후기 작성하기</h4>
+                <form action="post">
+                    <div class="_tit_input _clearfix">
+                        <label for="tit">제목 </label><input type="text" name="tit" placeholder="제목">
+                    </div>
+                    <div class="_upload">
+                        <input type="file" name="upload" placeholder="파일선택">
+                    </div>
+                    <div class="_write_wrap">
+                        <label for="content">내용</label><input type="text" name="content" placeholder="내용을 입력해주세요">
+                    </div>
+                    <div class="_sub_btn">
+                        <label for="submit">제출하기</label><input type="submit" name="submit" placeholder="submit">
+                    </div>
+                    <div class="_close_btn_wrap">
+                        <button type="button" class="_close_btn" title="닫기 버튼">
+                            <span class="_top"></span>
+                            <span class="_bot"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+    <script>
+        jQuery(function($) {
+            var $communityContainer = $('#_container._community');
+            var $photoReviewLst = $communityContainer.find('._photo_review ._lst');
+            var $moreBtn = $communityContainer.find('._more_btn');
+            var index = 1;
+            var lastIndex = Math.ceil($photoReviewLst.length / 8);
+            $moreBtn.on('click', function() {
+                for (i = 0; i < 8; i++) {
+                    $photoReviewLst.eq(i + (index * 8)).fadeIn();
+                }
+                index++
+                if (index == lastIndex) {
+                    $moreBtn.hide();
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 html,body{line-height:1;font-family: 'Noto Sans KR', sans-serif}
-button{border: none;background: none}
+input,label,button{border: none;background: none}
 ol,ul{list-style:none}
 a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 /* common */
@@ -183,7 +183,17 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_container._community ._sub_tit span{display: block;font-size: 16px;color: #777}
 #_container._community ._content_container ._content_wrap{border-top: 1px solid #ccc}
 #_container._community ._content_container ._content_wrap ._info_box{padding: 30px;padding-top: 0;color: #777}
-#_container._community ._content_container ._content_wrap ._info_box a{display: block;position: absolute;top: 10px;right: 20px;width: 120px;line-height: 50px;text-align: center;font-weight: bold;background-color: #f1f1f1;color: #000}
+#_container._community ._content_container ._content_wrap ._info_box a{display: block;position: absolute;top: 10px;right: 20px;width: 120px;line-height: 50px;text-align: center;font-weight: bold;background-color: #f1f1f1;color: #000;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
+#_container._community ._content_container ._content_wrap ._info_box a:hover,#_container._community ._content_container ._content_wrap ._info_box a:focus{background-color: #f9b0b0;color: #f1f1f1}
+#_new_write_wrap{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.8);z-index: 999}
+#_new_write_wrap ._new_write{position: absolute;top: 50%;left: 50%;width: 1200px;padding: 50px;background-color: #fff;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+#_new_write_wrap ._new_write ._sub_tit{margin-bottom: 30px;text-align: center;font-size: 32px;color: #000}
+#_new_write_wrap ._new_write form{width: 1000px;margin: 0 auto}
+#_new_write_wrap ._new_write form label{display: none}
+#_new_write_wrap ._new_write form ._tit_input input{display: block;width: 100%;height: 40px;margin-bottom: 20px;padding: 10px;line-height: 40px;font-size: 18px;border: 1px solid #ccc;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
+#_new_write_wrap ._new_write form ._upload input{display: block;margin-bottom: 20px;padding: 10px;width: 100%;height: 40px;line-height: 40px}
+#_new_write_wrap ._new_write form ._write_wrap input{width: 100%;height: 400px;margin-bottom: 30px;padding: 10px;border: 1px solid #ccc;font-size: 18px}
+#_new_write_wrap ._new_write form ._sub_btn input{display: block;width: 120px;height: 40px;margin: 0 auto;line-height: 40px;font-size: 18px;background-color: #ccc;font-weight: bold}
 #_container._community ._content_container ._content_wrap ._photo_review{margin-bottom: -30px}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst{float: left;position: relative;width: 22%;height: 350px;margin-right: 4%;margin-bottom: 30px}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst:nth-child(4n){margin-right: 0}
@@ -195,10 +205,13 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
 #_container._community ._content_container ._content_wrap ._photo_review ._lst ._img_box{overflow: hidden;height: 60%}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst ._img_box img{display: block;width: 100%}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box{padding: 10px;line-height: 24px;font-size: 12px}
-#_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._review_tit{line-height: 30px;font-size: 16px;font-weight: bold;;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
+#_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._review_tit{line-height: 30px;font-size: 16px;font-weight: bold;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._date{position: absolute;bottom: 10px;right: 10px}
-#_container._community ._content_container ._content_wrap ._more_btn_wrap{text-align: center}
-#_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn{display: inline-block;width: 120px;line-height: 50px;}
+#_container._community ._content_container ._content_wrap ._more_btn_wrap{width: 120px;height: 50px;margin: 30px auto 0}
+#_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn{display: block;width: 100%;height: 100%;padding: 0;line-height: 50px;font-size: 100%;font-weight: bold;;background-color: #f1f1f1;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
+#_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn:before{display: none}
+#_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn:after{display: none}
+#_container._community ._content_container ._content_wrap ._more_btn_wrap:hover ._more_btn,#_container._community ._content_container ._content_wrap ._more_btn_wrap:focus ._more_btn{background-color: #f9b0b0;color: #f1f1f1}
 /* width 1200px 보다 작은 화면 */
 @media only screen and (max-width:1199px){
     ._sub_tit{margin-bottom: 20px;font-size: 16px}
