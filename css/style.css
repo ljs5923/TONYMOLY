@@ -185,15 +185,20 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_container._community ._content_container ._content_wrap ._info_box{padding: 30px;padding-top: 0;color: #777}
 #_container._community ._content_container ._content_wrap ._info_box a{display: block;position: absolute;top: 10px;right: 20px;width: 120px;line-height: 50px;text-align: center;font-weight: bold;background-color: #f1f1f1;color: #000;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
 #_container._community ._content_container ._content_wrap ._info_box a:hover,#_container._community ._content_container ._content_wrap ._info_box a:focus{background-color: #f9b0b0;color: #f1f1f1}
-#_new_write_wrap{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.8);z-index: 999}
+#_new_write_wrap{display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.8);z-index: 999}
 #_new_write_wrap ._new_write{position: absolute;top: 50%;left: 50%;width: 1200px;padding: 50px;background-color: #fff;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 #_new_write_wrap ._new_write ._sub_tit{margin-bottom: 30px;text-align: center;font-size: 32px;color: #000}
 #_new_write_wrap ._new_write form{width: 1000px;margin: 0 auto}
 #_new_write_wrap ._new_write form label{display: none}
-#_new_write_wrap ._new_write form ._tit_input input{display: block;width: 100%;height: 40px;margin-bottom: 20px;padding: 10px;line-height: 40px;font-size: 18px;border: 1px solid #ccc;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
-#_new_write_wrap ._new_write form ._upload input{display: block;margin-bottom: 20px;padding: 10px;width: 100%;height: 40px;line-height: 40px}
+#_new_write_wrap ._new_write form ._tit_input input{display: block;width: 100%;height: 40px;margin-bottom: 20px;padding: 10px;line-height: 40px;font-size: 18px;border: 1px solid #ccc}
+#_new_write_wrap ._new_write form ._upload input{display: block;margin-bottom: 20px}
 #_new_write_wrap ._new_write form ._write_wrap input{width: 100%;height: 400px;margin-bottom: 30px;padding: 10px;border: 1px solid #ccc;font-size: 18px}
 #_new_write_wrap ._new_write form ._sub_btn input{display: block;width: 120px;height: 40px;margin: 0 auto;line-height: 40px;font-size: 18px;background-color: #ccc;font-weight: bold}
+#_new_write_wrap ._new_write form ._close_btn_wrap{position: absolute;top: 20px;right: 20px;width: 40px;height: 40px;background-color: #000}
+#_new_write_wrap ._new_write form ._close_btn_wrap ._close_btn{position: relative;width: 100%;height: 100%}
+#_new_write_wrap ._new_write form ._close_btn_wrap ._close_btn span{display: block;position: absolute;top: 50%;left: 50%;width: 20px;height: 2px;margin-top: -1px;margin-left: -10px;background-color: #ccc}
+#_new_write_wrap ._new_write form ._close_btn_wrap ._close_btn span._top{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}
+#_new_write_wrap ._new_write form ._close_btn_wrap ._close_btn span._bot{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}
 #_container._community ._content_container ._content_wrap ._photo_review{margin-bottom: -30px}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst{float: left;position: relative;width: 22%;height: 350px;margin-right: 4%;margin-bottom: 30px}
 #_container._community ._content_container ._content_wrap ._photo_review ._lst:nth-child(4n){margin-right: 0}
@@ -234,7 +239,10 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container ._content_wrap._content_04 ._content_box ._opening_hours_box{font-size: 16px}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._txt{font-size: 14px}
     #_container ._content_wrap._content_04 ._content_box ._review_box ._review_lsts li ._info_txt{font-size: 12px}
-    #_container ._content_wrap._content_04 ._content_box ._news_lsts li a{font-size: 14px}    
+    #_container ._content_wrap._content_04 ._content_box ._news_lsts li a{font-size: 14px}
+/*    community    */
+    #_container._community ._content_container ._content_wrap ._photo_review ._lst{height: 250px}
+    #_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._review_tit{overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
 }
 /* width 992px 보다 작은 화면 */
 @media only screen and (max-width:991px){
@@ -273,6 +281,12 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._brand ._content_wrap._content_03 ._content_box ._txt_box._txt_box_03{width: 100%}
     #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._sub_tit{font-size: 20px}
     #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._txt{font-size: 16px}
+/*    community    */
+    #_container._community ._content_container ._content_wrap ._info_box{font-size: 14px}
+    #_container._community ._content_container ._content_wrap ._info_box a{line-height: 40px;font-size: 14px}
+    #_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._review_tit{font-size: 14px}
+    #_container._community ._content_container ._content_wrap ._more_btn_wrap{height: 40px}
+    #_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn{line-height: 40px;font-size: 14px}
 }
 /* width 768px 보다 작은 화면 */
 @media only screen and (max-width:767px){
@@ -308,7 +322,11 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._brand ._content_wrap._content_02 ._content_box ._txt_box{line-height: 40px;font-size: 16px}
     #_container._brand ._content_wrap._content_02 ._content_box ._txt_box br{display: none}
     #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._sub_tit{font-size: 18px}
-    #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._txt{font-size: 14px}
+    #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._txt{font-size: 14px}    
+/*    community    */
+    #_container._community ._content_container ._content_wrap ._photo_review ._lst{width: 100%;margin-right: 0}
+    #_container._community ._content_container ._content_wrap ._info_box{text-align: center;font-size: 12px}
+    #_container._community ._content_container ._content_wrap ._info_box a{position: static;display: inline-block;top: inherit;right: inherit;margin-top: 30px}
 }
 @media only screen and (max-width:575px){
 /*    _container    */

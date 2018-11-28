@@ -576,7 +576,7 @@
                 </div>
             </article>
         </section>
-        <footer id="_footer">
+        <footer id="_footer" class="_community_footer">
             <div class="_footer_wrap">
                 <div class="_footer_top_wrap">
                     <div class="_footer_top">
@@ -613,11 +613,11 @@
                     <div class="_tit_input _clearfix">
                         <label for="tit">제목 </label><input type="text" name="tit" placeholder="제목">
                     </div>
-                    <div class="_upload">
-                        <input type="file" name="upload" placeholder="파일선택">
-                    </div>
                     <div class="_write_wrap">
                         <label for="content">내용</label><input type="text" name="content" placeholder="내용을 입력해주세요">
+                    </div>
+                    <div class="_upload">
+                        <input type="file" name="upload" placeholder="파일선택">
                     </div>
                     <div class="_sub_btn">
                         <label for="submit">제출하기</label><input type="submit" name="submit" placeholder="submit">
@@ -634,7 +634,9 @@
     </div>
     <script>
         jQuery(function($) {
+            //review lst more start
             var $communityContainer = $('#_container._community');
+            var $communityFooter = $('#_footer._community_footer');
             var $photoReviewLst = $communityContainer.find('._photo_review ._lst');
             var $moreBtn = $communityContainer.find('._more_btn');
             var index = 1;
@@ -647,6 +649,20 @@
                 if (index == lastIndex) {
                     $moreBtn.hide();
                 }
+            })
+            //review lst more end
+            //new write modal start
+            var $newWriteBtn = $communityContainer.find('._info_box a');
+            $newWriteBtn.on('click', function(e) {
+                e.preventDefault();
+                $newWriteWrap.show();
+            })
+            var $newWriteWrap = $('#_new_write_wrap');
+            var $closeBtnWrap = $newWriteWrap.find('._close_btn_wrap');
+            var $closeBtn = $closeBtnWrap.find('._close_btn');
+            $closeBtn.on('click',function(e){
+                e.preventDefault();
+                $newWriteWrap.hide();
             })
         })
     </script>
