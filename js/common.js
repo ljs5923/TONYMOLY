@@ -50,10 +50,11 @@ jQuery(function ($) {
     //    slide event start
     var $sliderContainer = $('._slider_container');
     var $sliderWrap = $('._slider_wrap');
+    var sliderWrapW = $sliderWrap.outerWidth(true)
     var $slider = $('._slider');
     var $sliderImg = $slider.find('li');
     var sliderImgW = $sliderImg.outerWidth();
-    var sliderWrapML = ($sliderWrap.outerWidth(true) - sliderImgW) / 2
+    var sliderWrapML = (sliderWrapW - sliderImgW) / 2
     var $cotrolWrap = $('._btn_wrap')
     var $controlBtn = $cotrolWrap.find('._btn');
     var $pagerWrap = $('._pager_wrap');
@@ -66,14 +67,23 @@ jQuery(function ($) {
         height: $sliderImg.outerHeight()
     });
     $(window).on('resize load', function () {
+        //    web responsive slider
+        sliderWrapW = $sliderWrap.outerWidth(true)
         sliderImgW = $sliderImg.outerWidth();
-        sliderWrapML = ($sliderWrap.outerWidth(true) - sliderImgW) / 2
+        sliderWrapML = (sliderWrapW - sliderImgW) / 2
         $sliderWrap.css({
             width: $sliderImg.outerWidth(),
             height: $sliderImg.outerHeight()
         });
+        console.log("sliderImgW : "+sliderImgW)
+        console.log("sliderWrapW : "+sliderWrapW)
+        console.log("sliderWrapML : "+sliderWrapML)
         $slider.css('left', -(sliderImgW - sliderWrapML));
-    })
+        //    web reponsive moblie menu
+        $moblieMenuWrap = $('#_moblie_menu_wrap');
+        moblieMenuW = $moblieMenuWrap.outerWidth();
+        $moblieMenuWrap.css('right', -(moblieMenuW));
+    });
     $controlBtn.on('click', function (e) {
         var imgIndex = $('._pager_btn._on').index();
         e.preventDefault();
@@ -90,8 +100,8 @@ jQuery(function ($) {
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index - 1))
         }, function () {
             if (index == 0) {
-                $slider.css('left', -(sliderImgW - sliderWrapML) + (-sliderImgW * 5));
-                $pagerBtn.eq(5).addClass('_on').siblings().removeClass('_on');
+                $slider.css('left', -(sliderImgW - sliderWrapML) + (-sliderImgW * 6));
+                $pagerBtn.eq(6).addClass('_on').siblings().removeClass('_on');
             }
             $pagerBtn.eq(index - 1).addClass('_on').siblings().removeClass('_on');
         });
@@ -102,7 +112,7 @@ jQuery(function ($) {
         $slider.stop().animate({
             left: -(sliderImgW - sliderWrapML) + (-sliderImgW * (index + 1))
         }, function () {
-            if (index == 5) {
+            if (index == 6) {
                 $slider.css('left', -(sliderImgW - sliderWrapML));
                 $pagerBtn.eq(0).addClass('_on').siblings().removeClass('_on');
             }

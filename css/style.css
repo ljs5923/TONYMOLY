@@ -237,7 +237,8 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_header ._header_down_wrap{display: none}
     #_header ._moblie_menu_btn_wrap ._m_btn{display: block}
 /*    _container    */
-    #_container ._slider_container{margin-top: 0}
+    #_container{margin-top: 0}
+    #_container ._slider_container ._slider_wrap ._slider{width: 800%}
     #_container._main ._content_wrap ._content_box ._content{position: static;top: inherit;left: inherit;-webkit-transform: none;-ms-transform: none;-moz-transform: none;transform: none}
     #_container._main ._content_wrap._content_03 ._content_box{height: auto}
     #_container._main ._content_wrap._content_03 ._content_box ._text_box ._foc_txt{font-size: 18px}
@@ -347,6 +348,7 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
 @media only screen and (max-width:575px){
 /*    _container    */
     #_container ._slider_container{margin-bottom: 15px}
+/*    #_container ._slider_container ._slider_wrap ._slider{width: 1000%}*/
     #_container ._slider_container ._pager_wrap{bottom: 0}
     #_container ._slider_container ._pager_wrap ._pager_btn{width: 10px;height: 10px;margin-right: 5px;text-indent: -9999px}
     #_container ._slider_container ._btn_wrap > ._btn{display: none}
