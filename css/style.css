@@ -227,6 +227,20 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
 #_container._community ._content_container ._content_wrap ._event_wrap ._lst ._img_box img{display: block;width: 100%}
 #_container._community ._content_container ._content_wrap ._event_wrap ._lst ._dec_box{padding: 10px;line-height: 24px;font-size: 12px}
 #_container._community ._content_container ._content_wrap ._event_wrap ._lst ._dec_box ._review_tit{line-height: 30px;font-size: 16px;font-weight: bold;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease}
+/* _myTonymoly */
+#_container._my_tonymoly ._content_container ._content_wrap ._content_box ._tit_box{height: 100px;line-height: 100px;margin-bottom: 50px;font-size: 48px;color: #555;border-bottom: 2px solid #555}
+#_container._my_tonymoly ._content_container ._content_wrap ._content_box ._login_wrap{float: left;position: relative;width: 50%;height: 250px}
+#_container._my_tonymoly ._content_container ._content_wrap ._content_box ._login_wrap ._login{position: absolute;top: 50%;left: 50%;width: 80%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%);color: #333}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box{position: relative;height: 100px;margin-bottom: 20px;padding-left: 80px}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box:before{content: '';position: absolute;width: 60px;height: 60px;top: 50%;left: 0;margin-top: -30px;background-image: url(../img/mytonymoly/icon_login_lock.gif);background-size: 100%}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._login_txt{line-height: 50px;font-size: 24px;color: #333}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._txt{line-height: 25px;font-size: 14px;color: #777}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box ._id_box{margin-bottom: 20px}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box label{display: inline-block;width: 30%;height: 30px;line-height: 30px;font-size: 18px}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box input{display: inline-block;width: 50%;height: 30px;line-height: 30px;font-size: 18px;border: 1px solid #ccc;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._txt{margin-bottom: 20px;font-size: 14px;color: #999}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._txt strong{font-size: 24px;color: #333}
+#_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login button{width: 120px;height: 40px;line-height: 40px;background-color: #111;color: #fff;cursor: pointer}
 /* width 1200px 보다 작은 화면 */
 @media only screen and (max-width:1199px){
     ._sub_tit{margin-bottom: 20px;font-size: 16px}
@@ -256,6 +270,9 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._community ._content_container ._content_wrap ._photo_review ._lst ._dec_box ._review_tit{overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
 /*    event    */
     #_container._event ._content_container ._content_wrap ._event_wrap ._lst ._dec_box ._review_tit{overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
+/*    _myTonymoly    */
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login button{width: 110px}
+    #_container._my_tonymoly ._content_container ._content_wrap ._content_box ._login_wrap{height: 350px}
 }
 /* width 992px 보다 작은 화면 */
 @media only screen and (max-width:991px){
@@ -302,6 +319,10 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._community ._content_container ._content_wrap ._more_btn_wrap ._more_btn{line-height: 40px;font-size: 14px}
 /*    event    */
     #_container._event ._content_container ._content_wrap ._event_wrap ._lst ._dec_box ._review_tit{font-size: 14px}
+/*    _myTonymoly    */
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._login_txt{font-size: 18px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._txt strong{font-size: 18px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box input{width: 70%}
 }
 /* width 768px 보다 작은 화면 */
 @media only screen and (max-width:767px){
@@ -344,6 +365,19 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._community ._content_container ._content_wrap ._info_box a{position: static;display: inline-block;top: inherit;right: inherit;margin-top: 30px}
 /*    event    */
     #_container._event ._content_container ._content_wrap ._event_wrap ._lst{width: 100%;margin-right: 0}
+/*    _myTonymoly    */
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box{height: 80px;padding-left: 60px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._login_txt{line-height: 40px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._txt{line-height: 20px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box:before{width: 40px;height: 40px;margin-top: -20px}
+    #_container._my_tonymoly ._content_container ._content_wrap ._content_box ._tit_box{height: 50px;line-height: 50px;margin-bottom: 30px;font-size: 24px}
+    #_container._my_tonymoly ._content_container ._content_wrap ._content_box ._login_wrap{float: none;width: 100%;height: auto;margin-bottom: 30px;padding-bottom: 30px;border-bottom: 1px solid #ccc}
+    #_container._my_tonymoly ._content_container ._content_wrap ._content_box ._login_wrap ._login{position: static;top: inherit;left: inherit;margin: 0 auto;-webkit-transform: none;-ms-transform: none;-moz-transform: none;transform: none}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._login_txt_box ._txt{font-size: 12px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box label{font-size: 14px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box input{font-size: 14px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._txt{font-size: 12px}
+    #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login button{font-size: 12px}
 }
 @media only screen and (max-width:575px){
 /*    _container    */
