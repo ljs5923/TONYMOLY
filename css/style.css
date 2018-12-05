@@ -54,7 +54,7 @@ a{text-decoration:none;font-size:100%;color:#555;background:transparent}
 #_header ._moblie_menu_btn_wrap ._m_btn._on span._top{top: 50%;margin-top: -1px;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);-moz-transform: rotate(45deg);transform: rotate(45deg);}
 #_header ._moblie_menu_btn_wrap ._m_btn._on span._mid{display: none}
 #_header ._moblie_menu_btn_wrap ._m_btn._on span._bot{top: 50%;margin-top: -1px;-webkit-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);-moz-transform: rotate(-45deg);transform: rotate(-45deg)}
-#_moblie_menu_wrap{position: fixed;top: 0;right: 0;width: 50%;height: 100%;z-index: 300;background-color: rgba(0,0,0,0.8)}
+#_moblie_menu_wrap{display: none;position: fixed;top: 0;right: 0;width: 50%;height: 100%;z-index: 300;background-color: rgba(0,0,0,0.8)}
 #_moblie_menu_wrap ._moblie_gnb{position: absolute;top: 50%;left: 50%;width: 80%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);transform: translate(-50%,-50%)}
 #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst{height: auto}
 #_moblie_menu_wrap ._moblie_gnb ._moblie_menu_lsts ._lst > a{display: inline-block;line-height: 40px;font-size: 22px;color: #fff}
@@ -255,17 +255,22 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap{display: none;text-align: center}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl{display: none;text-align: left}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl:first-of-type{display: block}
-#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a{display: block;position: relative;padding: 30px 60px;border-bottom: 1px solid #ccc}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a{display: block;position: relative;padding: 35px 60px;border-bottom: 1px solid #ccc}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a:before{content: 'Q';position: absolute;top: 50%;left: 10px;width: 10px;height: 10px;margin-top: -5px;line-height: 10px;font-weight: bold}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a:hover,#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a:focus{color: #f9b0b0}
-#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dd{display: none;position: relative;padding: 30px 60px;line-height: 24px;border-bottom: 1px solid #ccc;background-color: #f1f1f1}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dd{display: none;position: relative;padding: 35px 60px;line-height: 24px;border-bottom: 1px solid #ccc;background-color: #f1f1f1}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dd:before{content: 'A';position: absolute;top: 50%;left: 10px;width: 10px;height: 10px;margin-top: -5px;line-height: 10px;font-weight: bold}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap._active{display: block}
 #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap{margin-top: 20px}
-#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap ._paing{display: inline-block}
-#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a{display: inline-block;width: 40px;}
-/* width 1200px 보다 작은 화면 */
-@media only screen and (max-width:1199px){
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap ._paging{display: inline-block}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap ._paging a._active{color: #f9b0b0}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a{display: inline-block;width: 40px;height: 40px;line-height: 40px}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._prev_btn{position: relative;padding-left: 20px}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._prev_btn:before{content: '';position: absolute;top: 50%;left: 0;width: 20px;height: 20px;margin-top: -10px;background-image: url(../img/service/prev.png);background-size: 100%}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._next_btn{position: relative;padding-right: 20px}
+#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._next_btn:before{content: '';position: absolute;top: 50%;right: 0;width: 20px;height: 20px;margin-top: -10px;background-image: url(../img/service/next.png);background-size: 100%}
+/* width 1025 보다 작은 화면 */
+@media only screen and (max-width:1024px){
     ._sub_tit{margin-bottom: 20px;font-size: 16px}
     ._sub_tit em{font-size: 18px}
 /*    _header    */
@@ -273,6 +278,7 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_header ._header_top ._member_info_wrap{display: none}
     #_header ._header_down_wrap{display: none}
     #_header ._moblie_menu_btn_wrap ._m_btn{display: block}
+    #_moblie_menu_wrap{display: block}
 /*    _container    */
     #_container{margin-top: 0}
     #_container ._slider_container ._slider_wrap ._slider{width: 800%}
@@ -351,6 +357,12 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box{padding-right: 0}
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box ._login_btn_box{position: static;top: inherit;right: inherit;width: 110px;height: 40px;margin-top: 20px}
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box ._login_btn_box ._login_btn{line-height: 40px}
+/*    _service    */
+    #_container._my_tonymoly ._content_container ._content_wrap ._content_box ._tit_box{height: 50px;line-height: 50px;font-size: 28px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst a{overflow: hidden;font-size: 14px;text-overflow: ellipsis;white-space: nowrap}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl{font-size: 14px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a,#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dd{padding: 20px 40px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl dt a:before{font-size: 14px}
 }
 /* width 768px 보다 작은 화면 */
 @media only screen and (max-width:767px){
@@ -407,6 +419,10 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._id_pw_box input{font-size: 14px}
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login ._txt{font-size: 12px}
     #_container._my_tonymoly ._content_container ._login_container ._login_wrap ._login button{font-size: 12px}
+/*    _service   */
+    #_container._service ._content_container ._content_wrap ._content_box ._tit_box{margin-bottom: 0;font-size: 18px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst a{font-size: 12px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl{font-size: 12px}
 }
 @media only screen and (max-width:575px){
 /*    _container    */
