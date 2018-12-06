@@ -423,6 +423,8 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._service ._content_container ._content_wrap ._content_box ._tit_box{margin-bottom: 0;font-size: 18px}
     #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst a{font-size: 12px}
     #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap dl{font-size: 12px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a{width: 30px;height: 30px;line-height: 30px;font-size: 14px}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._prev_btn:before,#_container._service ._content_container ._content_wrap ._faq_lsts_container ._qa_lsts_wrap ._paging_wrap a._next_btn:before{width: 15px;height: 15px;margin-top: -7.5px}
 }
 @media only screen and (max-width:575px){
 /*    _container    */
@@ -454,4 +456,9 @@ box-sizing: border-box;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s
     #_container._brand ._content_wrap._content_03 ._content_box ._txt_box ._txt{font-size: 14px}
 /*    _myTonymoly    */
     #_container._my_tonymoly ._content_container ._content_wrap._content_02{display: none}
+/*    _service    */
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst{width: 50% !important}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst a{border: 1px solid #000;border-top: none}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst:nth-child(2n) a{border-left: none}
+    #_container._service ._content_container ._content_wrap ._faq_lsts_container ._faq_lsts ._faq_lst._active a{border-bottom: 1px solid #000}
 }
