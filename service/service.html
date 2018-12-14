@@ -600,6 +600,7 @@
                 var $qalstsWrapPagingWrap = $(this).find('._paging_wrap');
                 var $prevNextBtn = $qalstsWrapPagingWrap.find('a');
                 var $qalstsWrapPaging = $qalstsWrapPagingWrap.find('._paging');
+                var $faqLst = $('._faq_lst');
                 var paging = '';
                 var currentNumber = 0;
                 var currentPage = 0;
@@ -614,8 +615,7 @@
                 $qalstsWrapPaging.append(paging); //페이지 수 추가                
                 var $pagingBtn = $qalstsWrapPaging.find('a');
                 $pagingBtn.hide().slice((currentNumber * showNumber), (currentNumber + 1) * showNumber).show();
-
-                function pagingEvent(pageindex) {
+                var pagingEvent = function (pageindex) {// 답변 목록 출력 및 페이지 번호 효과 이벤트
                     if (pageindex == -1) {
                         pageindex = 0;
                     }
@@ -626,7 +626,6 @@
                     e.preventDefault();
                     $(this).next().stop().slideToggle();
                 });
-                var $faqLst = $('._faq_lst');
                 $faqLst.on('click', function() { //faq목록 화면 출력
                     var index = $(this).index();
                     $qalstsWrap.eq(index).show().siblings().hide();

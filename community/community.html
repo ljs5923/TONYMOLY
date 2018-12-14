@@ -658,13 +658,13 @@
             //review lst more end
             //new write modal start
             var $newWriteBtn = $communityContainer.find('._info_box a');
+            var $newWriteWrap = $('#_new_write_wrap');
+            var $closeBtnWrap = $newWriteWrap.find('._close_btn_wrap');
+            var $closeBtn = $closeBtnWrap.find('._close_btn');
             $newWriteBtn.on('click', function(e) {
                 e.preventDefault();
                 $newWriteWrap.show();
             })
-            var $newWriteWrap = $('#_new_write_wrap');
-            var $closeBtnWrap = $newWriteWrap.find('._close_btn_wrap');
-            var $closeBtn = $closeBtnWrap.find('._close_btn');
             $closeBtn.on('click',function(e){
                 e.preventDefault();
                 $newWriteWrap.hide();
